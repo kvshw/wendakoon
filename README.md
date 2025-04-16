@@ -1,130 +1,123 @@
-# Wendakoon - Luxury Portfolio Website
+# Wendakoon Portfolio
 
-A high-end, luxury-styled portfolio website designed to showcase professional work and personal achievements in an elegant and impressive manner. Built with Flutter Web and Flask.
+A modern, responsive portfolio application built with Flutter and Node.js.
 
-## Tech Stack
+## Version 1.0.0
 
-- **Frontend**: Flutter Web
-- **Backend**: Flask (Python)
-- **Database**: Supabase
-- **Hosting**: TBD
+### Features
+- Modern, responsive profile dashboard
+- Dark/Light theme support
+- Real-time GitHub integration
+- Social media links and stats
+- Glass morphism UI design
+- Animated components
+- Responsive layout
 
-## Project Structure
-
-```
-wendakoon/
-├── frontend/          # Flutter web application
-│   ├── lib/
-│   │   ├── models/    # Data models
-│   │   ├── views/     # UI screens
-│   │   ├── services/  # API services
-│   │   └── utils/     # Helper functions
-│   └── web/          # Web-specific files
-│
-├── backend/           # Flask backend
-│   ├── app.py        # Main application file
-│   ├── config.py     # Configuration
-│   ├── routes/       # API endpoints
-│   ├── models/       # Data models
-│   ├── services/     # Business logic
-│   └── tests/        # Test files
-│
-└── README.md         # Project documentation
-```
-
-## Setup Instructions
+### Tech Stack
+- **Frontend**: Flutter
+- **Backend**: Node.js
+- **APIs**: GitHub API
+- **State Management**: Riverpod
+- **Routing**: Go Router
+- **UI Components**: 
+  - Font Awesome Icons
+  - Google Fonts
+  - Cached Network Image
+  - URL Launcher
 
 ### Prerequisites
-
-- Flutter SDK (latest stable version)
-- Python 3.8+
+- Flutter SDK
+- Node.js
 - Git
-- VS Code or IntelliJ IDEA (recommended)
+- GitHub Account
 
-### Frontend Setup
-
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-
-2. Get Flutter dependencies:
-   ```bash
-   flutter pub get
-   ```
-
-3. Run the web app:
-   ```bash
-   flutter run -d chrome
-   ```
-
-### Backend Setup
-
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-
-2. Create and activate virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Set up environment variables:
-   - Copy `.env.example` to `.env`
-   - Fill in the required environment variables
-
-5. Run the Flask server:
-   ```bash
-   flask run
-   ```
-
-### Environment Variables
-
-Create a `.env` file in both frontend and backend directories with the following variables:
-
-```env
-# Backend (.env)
-FLASK_APP=app.py
-FLASK_ENV=development
-SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_key
-
-# Frontend (.env)
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_supabase_anon_key
+### Environment Setup
+1. Clone the repository
+```bash
+git clone https://github.com/kvshw/wendakoon.git
+cd wendakoon
 ```
 
-## Development
+2. Install dependencies
+```bash
+# Frontend
+cd frontend
+flutter pub get
 
-- Follow the Flutter style guide for frontend development
-- Use Black and flake8 for Python code formatting
-- Write tests for new features
-- Update documentation as needed
+# Backend
+cd ../backend
+npm install
+```
 
-## Features
+3. Configure environment variables
+- Copy `.env.example` to `.env`
+- Update the following variables:
+  - `GITHUB_TOKEN`: Your GitHub personal access token
+  - Other configuration variables as needed
 
-- Luxury-styled landing page with animated hero section
-- Interactive portfolio gallery with project showcase
-- Professional statistics dashboard
-- About me section with timeline
-- Contact and inquiry system
-- Responsive design for all devices
+### Running the App
 
-## Contributing
+#### Frontend
+```bash
+cd frontend
+flutter run
+```
 
+#### Backend
+```bash
+cd backend
+npm start
+```
+
+### Project Structure
+```
+wendakoon/
+├── frontend/           # Flutter application
+│   ├── lib/
+│   │   ├── core/      # Core functionality
+│   │   ├── features/  # Feature modules
+│   │   └── main.dart  # Entry point
+│   └── pubspec.yaml   # Dependencies
+├── backend/           # Node.js server
+│   ├── routes/       # API routes
+│   └── package.json  # Dependencies
+└── README.md
+```
+
+### Current Features
+- Profile Dashboard
+  - Avatar and basic info
+  - Social stats with animations
+  - GitHub integration
+  - Social media links
+- Theme Switching
+  - Dark mode
+  - Light mode with glass effect
+- Responsive Design
+  - Mobile-first approach
+  - Adaptive layouts
+
+### Upcoming Features
+- Project showcase
+- Blog/Articles section
+- Contact form
+- Skills section
+- Experience timeline
+- Education details
+- Achievements
+- Project filtering
+
+### Contributing
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-
+### License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+### Contact
+Kavishwa Wendakoon - kaveebhashiofficial@gmail.com
+
+Project Link: https://github.com/kvshw/wendakoon
