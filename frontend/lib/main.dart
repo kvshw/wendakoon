@@ -3,7 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:wendakoon/core/providers/theme_provider.dart';
 import 'package:wendakoon/core/theme/app_theme.dart';
-import 'package:wendakoon/features/profile/screens/profile_screen.dart';
+import 'package:wendakoon/core/router/app_router.dart';
 
 Future<void> main() async {
   // Load environment variables
@@ -23,12 +23,12 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeProvider);
 
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Kavishwa Wendakoon',
       themeMode: themeMode,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      home: const ProfileScreen(),
+      routerConfig: router,
     );
   }
 }

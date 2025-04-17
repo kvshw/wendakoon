@@ -8,7 +8,9 @@ import 'package:wendakoon/features/profile/widgets/animated_stats_card.dart';
 import 'package:wendakoon/features/profile/widgets/profile_avatar.dart';
 import 'package:wendakoon/features/profile/widgets/project_card.dart';
 import 'package:wendakoon/features/profile/widgets/social_link_card.dart';
+import 'package:wendakoon/features/profile/widgets/experience_timeline.dart';
 import 'package:wendakoon/core/providers/theme_provider.dart';
+import 'package:go_router/go_router.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
@@ -26,6 +28,10 @@ class ProfileScreen extends ConsumerWidget {
         elevation: 0,
         actions: [
           IconButton(
+            icon: const Icon(Icons.work, color: Colors.white),
+            onPressed: () => context.go('/projects'),
+          ),
+          IconButton(
             icon: Icon(
               isDark ? Icons.light_mode : Icons.dark_mode,
               color: Colors.white,
@@ -42,9 +48,10 @@ class ProfileScreen extends ConsumerWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Colors.indigo.shade900,
-              Colors.black,
+              const Color(0xFF6B2FD9), // Purple
+              const Color(0xFF1E1B4B), // Dark Purple
             ],
+            stops: const [0.0, 1.0],
           ),
         ),
         child: SafeArea(
@@ -196,6 +203,21 @@ class ProfileScreen extends ConsumerWidget {
                     backgroundColor: Colors.blue.shade700,
                     url: 'https://www.linkedin.com/in/kavishwa-wendakoon/',
                   ),
+                  const SizedBox(height: 32),
+                  Row(
+                    children: [
+                      const Text(
+                        'Experience',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  const ExperienceTimeline(),
                   const SizedBox(height: 32),
                   Row(
                     children: [
